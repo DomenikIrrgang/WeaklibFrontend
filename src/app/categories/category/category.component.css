@@ -1,0 +1,15 @@
+.category {
+    padding: 5px;
+    background-color: #D9EDF7;
+    width: auto;
+    border: #BCE8F1 solid 1px;
+    color: #6A9BB2;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.category-close {
+    margin-left: 5px;
+}
+

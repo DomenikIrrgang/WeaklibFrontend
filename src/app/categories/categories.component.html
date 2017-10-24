@@ -1,0 +1,15 @@
+<div class="categories">
+    <div class="select-categories">
+        <div>
+            <select class="combobox" [(ngModel)]="selectedCategory">
+                <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" class="btn btn-primary btn-xs add-button" value="Add Categorie" (click)="addCategory()" />
+        </div>
+    </div>
+    <div class="selected-categories">
+        <category *ngFor="let category of selectedCategories" [category]="category" (notify)="removeCategory($event)"></category>
+    </div>
+</div>

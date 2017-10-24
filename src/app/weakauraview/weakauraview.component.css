@@ -1,0 +1,79 @@
+@media (min-width: 1080px) {
+    .weakaura-view {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "left content right";
+        grid-gap: 10px;
+    }
+
+    .follow-button {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 5px;
+    }
+
+    .picture > img{
+        height: 140px;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .weakaura-view {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "right"
+        "content";
+        grid-gap: 10px;
+    }
+
+    .follow-button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .picture > img{
+        cursor: pointer;
+    }
+}
+
+.heading {
+    color:#4099FF;
+}
+
+.profilepicture {
+    grid-area: right;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+}
+
+.picture {
+    border: 1px dotted gray;
+    text-align: center;
+    padding: 5px;
+}
+
+.picture > img {
+    max-width: 100%;
+}
+
+.entry {
+    width: 100%;
+}

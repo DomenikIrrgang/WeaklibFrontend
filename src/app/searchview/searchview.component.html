@@ -1,0 +1,66 @@
+<div class="searchview">
+    <div class="content">
+        <clickablepanel heading="Filter" [contentVisible]="true" #filterPanel>
+            <div class="filter">
+                <div class="name-title">
+                    <b>Name:</b>
+                </div>
+                <div class="name-content">
+                    <input class="form-element" type="text" [(ngModel)]="name" (keydown)="checkReturnKey($event)">
+                </div>
+                <div class="author-title">
+                    <b>Author:</b>
+                </div>
+                <div class="author-content">
+                    <input class="form-element" type="text" [(ngModel)]="author" (keydown)="checkReturnKey($event)">
+                </div>
+                <div class="categories-title">
+                    <b>Categories:</b>
+                </div>
+                <div class="categories-content">
+                    <categories (notify)="categoriesChanged($event)"></categories>
+                </div>
+                <div></div>
+                <div class="search">
+                    <input class="btn btn-primary btn-sm" type="submit" value="Search" (click)="searchSubmit()" />
+                </div>
+            </div>
+        </clickablepanel>
+        <clickablepanel heading="Results" [contentVisible]="false" #resultPanel>
+            <div *ngIf="hasResult(); else noResults">
+            <table class="table">
+                <tr *ngFor="let weakaura of searchResult">
+                    <td>
+                        <div class="weakaura-grid">
+                            <div class="weakaura-picture">
+                                <div class="picture-container">
+                                    <img src="{{ weakaura.profilePicture }}" class="picture" />
+                                </div>
+                            </div>
+
+                            <div class="weakaura-name">
+                                <a routerLink="/weakaura/{{ weakaura.hash }}">{{ weakaura.name }}</a>
+                            </div>
+
+                            <div class="weakaura-categories">
+                                <categoriesdisplay [categories]="weakaura.categories" [align]="'left'"></categoriesdisplay>
+                            </div>
+
+                            <div class="weakaura-meta">
+                                <img src="assets/img/user.png" class="icon" /><b>Author: </b><a routerLink="/user/{{ weakaura.user }}">{{ weakaura.user }}</a>
+                                <img src="assets/img/clock.png" class="icon" /><b>Upload: </b>{{ time.difference(weakaura.created) }}
+                                <img src="assets/img/clock.png" class="icon" /><b>Update: </b>{{ time.difference(weakaura.updated) }}
+                            </div>
+
+                            <div class="weakaura-description">
+                                {{ weakaura.description }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <ng-template #noResults>No results :(</ng-template>
+        </clickablepanel>
+    </div>
+</div>

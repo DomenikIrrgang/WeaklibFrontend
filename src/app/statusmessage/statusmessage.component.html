@@ -1,0 +1,21 @@
+<div>
+    <div *ngIf="type=='success'" class="alert alert-success alert-dismissable fade in">
+        <a *ngIf="closeable" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success</strong> {{ message }}
+    </div>
+
+    <div *ngIf="type=='info'" class="alert alert-info alert-dismissable fade in">
+        <a *ngIf="closeable" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Info</strong> {{ message }}
+    </div>
+
+    <div *ngIf="type=='warning'" class="alert alert-warning alert-dismissable fade in">
+        <a *ngIf="closeable" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Attention</strong> {{ message }}
+    </div>
+
+    <div *ngIf="type=='error'" class="alert alert-danger alert-dismissable fade in">
+        <a *ngIf="closeable" href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Error</strong> {{ message }}
+    </div>
+</div>

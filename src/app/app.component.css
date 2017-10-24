@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+    "navigation"
+    "content"
+    "footer";
+    height: 100vh;
+}
+
+.header {
+    background-color: blue;
+    grid-area: header;
+}
+
+.navigation {
+    background-color: red;
+    grid-area: navigation;
+}
+
+.content {
+    background-color: #f1f1f1;
+    grid-area: content;
+    padding: 5px;
+}
+
+.footer {
+    background-color: white;
+    height: 50px;
+    grid-area: footer;
+}

@@ -1,0 +1,13 @@
+<div class="clickablepanel">
+    <div class="clickablepanel-heading" (click)="panelClick()">
+        <div *ngIf="!contentVisible">
+            <span class="arrow">&#9658;</span>{{ heading }}
+        </div>
+        <div *ngIf="contentVisible">
+            <span class="arrow">&#9660;</span>{{ heading }}
+        </div>
+    </div>
+    <div class="panel-content" [hidden]="!contentVisible" #content>
+        <ng-content></ng-content>
+    </div>
+</div>

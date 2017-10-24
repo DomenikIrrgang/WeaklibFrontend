@@ -1,0 +1,17 @@
+<div class="image-upload">
+    <div class="image-grid">
+        <div class="image-container form-element" *ngFor="let path of paths; let i = index">
+            <img class="image-preview" [src]="path.image" />
+            <div class="close-div">
+                <span class="close category-close" id="{{ i }}" aria-hidden="true" (click)="removeImage($event)">&times;</span>
+            </div>    
+        </div>
+    </div>
+    <input *ngIf="multiple==false" (change)="filesChanged($event)" accept="image/x-png,image/gif,image/jpeg" class="file-input"
+        id="file" type="file" name="file[]" />
+    <input *ngIf="multiple==true" (change)="filesChanged($event)" accept="image/x-png,image/gif,image/jpeg" class="file-input"
+        id="file" type="file" name="file[]" multiple />
+    <div class="upload-square">
+        <label class="upload" for="file"><span class="glyphicon glyphicon-open upload-icon" aria-hidden="true"></span>{{ caption }}</label>
+    </div>
+</div>

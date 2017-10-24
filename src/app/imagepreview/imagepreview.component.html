@@ -1,0 +1,22 @@
+<div class="background" *ngIf="isVisible">
+
+</div>
+
+<div class="grid" *ngIf="isVisible">
+    <div class="preview-close">
+        <span class="close" (click)="close()">&times;</span>
+    </div>
+    <div class="content">
+        <div class="arrow-left">
+            <span class="arrow glyphicon glyphicon-menu-left" (click)="previousImage()"></span>
+        </div>
+        <div class="preview" *ngIf="images">
+            <img src="{{ images[currentImage].url }}" (click)="nextImage()"/>
+            <div class="footer">test</div>
+        </div>
+        <div class="arrow-right">
+            <span class="arrow glyphicon glyphicon-menu-right" (click)="nextImage()"></span>
+        </div>
+    </div>
+    <div class="head">Image {{ currentImage + 1}} out of {{ images.length }}</div>
+</div>

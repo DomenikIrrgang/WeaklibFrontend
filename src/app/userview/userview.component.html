@@ -1,0 +1,34 @@
+<div class="user-view" *ngIf="user != undefined; else noUser">
+    <div class="profilepicture">
+        <profilepicture profilePicture="{{ user.profilePicture }}">
+                <div><h1 class="heading">{{ user.name }}</h1></div>
+                <input type="button" class="btn btn-primary btn-sm follow-button" value="Follow" (click)="follow()"/>
+                <div><img src="assets/img/clock.png" class="icon"/><b>Joined: </b>{{ time.difference(user.created) }}</div>
+        </profilepicture>
+    </div>
+    <div class="content">
+        <div class="description">
+            <clickablepanel heading="Description" [contentVisible]="true">
+                {{ user.description }}
+            </clickablepanel>
+        </div>
+        <div class="weakauras">
+            <clickablepanel heading="Weakauras" [contentVisible]="true">
+                <div class="weakaura-grid">
+                    <div *ngFor="let weakaura of weakauras" class="weakaura">
+                        <div class="picture">
+                            <a routerLink="/weakaura/{{ weakaura.hash }}"><img src="{{weakaura.profilePicture}}" /></a>
+                        </div>
+                        <div class="title">
+                            <a routerLink="/weakaura/{{ weakaura.hash }}">{{ weakaura.name }}</a>
+                        </div>
+                        <div class="weakaura-date">
+                            {{ time.difference(weakaura.created) }}
+                        </div>
+                    </div>
+                </div>
+            </clickablepanel>
+        </div>
+    </div>
+</div>
+<ng-template #noUser><error code="404">That user does not exist!</error></ng-template>

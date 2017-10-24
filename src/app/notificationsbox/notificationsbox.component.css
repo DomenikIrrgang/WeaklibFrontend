@@ -1,0 +1,28 @@
+.notification {
+    display: grid;
+    grid-template-columns: 30px 2fr 0.5fr 2fr 2fr;
+    grid-gap: 5px;
+}
+
+.picture > img {
+    height: 25px;
+}
+
+.time {
+    text-align: center;
+}
+
+.actor {
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+}
+
+.actor > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.actor > span {
+
+}

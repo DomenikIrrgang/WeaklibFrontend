@@ -1,0 +1,25 @@
+<div class="login-view">
+    <div class="login-box">
+        <statusmessage type="{{ statusType }}" message="{{ statusMessage }}" [closeable]="false"></statusmessage>
+        <box heading="Login">
+            <div class="login-grid">
+                <div class="user-label">
+                    <b>Username:</b></div>
+                <div class="user-content">
+                    <input class="form-element" [(ngModel)]="username" type="text" name="username">
+                </div>
+                <div class="pass-label">
+                    <b>Password: </b>
+                </div>
+                <div class="pass-content">
+                    <input class="form-element" [(ngModel)]="password" type="password" name="password">
+                </div>
+                <div></div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="login" value="remember" [checked]="remember" (change)="checkboxClick()"/> Remember me</label>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary btn-sm login-button" (click)="loginClick()" value="Login">
+        </box>
+    </div>
+</div>

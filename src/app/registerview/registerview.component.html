@@ -1,0 +1,36 @@
+<div class="content-view">
+    <div class="register-content">
+        <statusmessage type="{{ statusType }}" message="{{ statusMessage }}" [closeable]="false"></statusmessage>
+        <box heading="Register">
+            <div class="register-grid">
+                <div class="username-label">
+                    <b>Username:</b>
+                </div>
+                <div class="username-content">
+                    <input class="form-element" [(ngModel)]="username" type="text" />
+                </div>
+                <div class="email-label">
+                    <b>Email:</b>
+                </div>
+                <div class="email-content">
+                    <input class="form-element" [(ngModel)]="email" type="text" />
+                </div>
+                <div class="password-label">
+                    <b>Password:</b>
+                </div>
+                <div class="password-content">
+                    <input class="form-element" [(ngModel)]="password" type="password" />
+                </div>
+                <div class="password-repeat-label">
+                    <b>Repeat Password:</b>
+                </div>
+                <div class="password-repeat-content">
+                    <input class="form-element" [(ngModel)]="passwordRepeat" type="password" />
+                </div>
+            </div>
+            <div class="register">
+                <input type="button" [disabled]="buttonDisabled" class="btn btn-primary btn-sm register-button" value="Register" (click)="register()" />
+            </div>
+        </box>
+    </div>
+</div>

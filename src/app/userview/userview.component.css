@@ -1,0 +1,115 @@
+@media (min-width: 1080px) {
+    .user-view {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "left content right";
+        grid-gap: 10px;
+    }
+
+    .follow-button {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+
+    .weakaura-grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 5px;
+    }
+
+    .weakaura {
+        display: grid;
+        grid-template-rows: 140px 20px 18px;
+        grid-template-areas: "picture"
+        "title"
+        "date";
+        border: 1px dotted gray;
+        padding: 5px;
+    }
+
+    .picture > a > img {
+        height: 140px;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .user-view {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "right"
+        "content";
+        grid-gap: 10px;
+    }
+
+    .follow-button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .weakaura-grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .picture > img{
+        cursor: pointer;
+    }
+
+    .weakaura {
+        display: grid;
+        grid-template-rows: auto 20px 18px;
+        grid-template-areas: "picture"
+        "title"
+        "date";
+        border: 1px dotted gray;
+        padding: 5px;
+    }
+
+    .picture > a > img {
+        max-width: 100%;
+    }
+}
+
+.profilepicture {
+    grid-area: right;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+}
+
+.follow-button {
+    width: 140px;
+    margin-bottom: 5px;
+}
+
+.heading {
+    color:#4099FF;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    padding-right: 5px;
+}
+
+.picture {
+    grid-area: picture;
+    text-align: center;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+}
+
+.weakaura-date {
+    grid-area: date;
+    text-align: center;
+    color: grey;
+}

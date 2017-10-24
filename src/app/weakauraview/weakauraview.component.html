@@ -1,0 +1,48 @@
+<div class="weakaura-view"  *ngIf="weakaura; else noWeakaura">
+    <div class="profilepicture">
+        <profilepicture profilePicture="{{ weakaura.profilePicture }}">
+            <div>
+                <div><h1 class="heading">{{ weakaura.name }}</h1></div>
+                <input type="button" class="btn btn-primary btn-sm follow-button" value="Follow" (click)="follow()"/>
+                <categoriesdisplay [categories]="weakaura.categories" [align]="'center'"></categoriesdisplay>
+                <div class="entry"><img src="assets/img/user.png" class="icon"/>Author: <a routerLink="/user/{{ weakaura.user }}">{{ weakaura.user }}</a></div>
+                <div class="entry"><img src="assets/img/clock.png" class="icon"/><b>Upload: </b>{{ time.difference(weakaura.created) }}</div>
+                <div class="entry"><img src="assets/img/clock.png" class="icon"/><b>Update: </b>{{ time.difference(weakaura.updated) }}</div>
+                <div class="entry"><img src="assets/img/eye.png" class="icon"/>Views: {{ weakaura.views }}</div>
+            </div>
+        </profilepicture>
+    </div>
+    <div class="content">
+        <div class="description">
+            <clickablepanel heading="Description" [contentVisible]="true">
+                {{ weakaura.description }}
+            </clickablepanel>
+        </div>
+        <div class="images">
+            <clickablepanel heading="Images" [contentVisible]="true">
+                <div class="image-grid" *ngIf="weakaura.images.length > 0; else noImages">
+                    <div *ngFor="let images of weakaura.images; let i = index" class="picture">
+                        <img src="{{images.url}}" name="{{i}}" (click)="openImagePreview($event)"/>
+                    </div>
+                </div>
+            </clickablepanel>
+        </div>
+        <div class="strings">
+            <clickablepanel heading="Strings">
+                <strings [weakaura]="weakaura"></strings>
+            </clickablepanel>
+        </div>
+        <div class="code-viewer">
+            <clickablepanel heading="Code Viewer">
+            </clickablepanel>
+        </div>
+        <div class="comments">
+            <clickablepanel heading="Comments" [contentVisible]="true">
+                <comments [source]="weakaura"></comments>
+            </clickablepanel>
+        </div>
+    </div>
+    <imagepreview [images]="weakaura.images" #imagePreview></imagepreview>
+</div>
+<ng-template #noWeakaura><error code="404">That weakaura does not exist!</error></ng-template>
+<ng-template #noImages>There are no images for this weakaura!</ng-template>

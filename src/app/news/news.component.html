@@ -1,0 +1,20 @@
+<div class="news">
+    <box heading="News">
+        <div class="news-content" *ngIf="news">
+            <div class="news-entry" *ngFor="let newsEntry of news">
+                <div class="news-title">
+                    <a routerLink="/news/{{ newsEntry.hash }}">{{ newsEntry.title }}</a>
+                </div>
+                <div class="news-time">
+                    {{ time.difference(newsEntry.uploadTime) }}
+                </div>
+                <div class="news-image">
+                    <a routerLink="/news/{{ newsEntry.hash }}"><img src="{{ newsEntry.imageURL }}" /></a>
+                </div>
+                <div class="news-content">
+                    {{ newsEntry.content }}
+                </div>
+            </div>
+        </div>
+    </box>
+</div>

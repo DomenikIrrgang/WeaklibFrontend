@@ -1,0 +1,52 @@
+@media (min-width: 1080px){
+.uploadview {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "left content right";
+    }
+}
+
+@media(max-width: 1080){
+    .uploadview{
+        display: grid;
+        grid-template-areas:"content";
+
+    }
+}
+
+@media(min-width:1400px){
+    .upload-grid{
+
+        display: grid;
+        grid-template-columns: 135px 1fr;
+        grid-gap: 5px;
+        grid-template-areas: "left right";
+    }
+}
+
+@media(max-width: 1400px){
+    .upload-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+}
+
+.content{
+    grid-area: content;
+
+}
+
+.textarea {
+    height: 25px;
+    resize: none;
+    overflow: hidden;
+}
+
+.upload-button{
+width: 100%;
+}
+
+.upload{
+    margin-top: 5px;
+}

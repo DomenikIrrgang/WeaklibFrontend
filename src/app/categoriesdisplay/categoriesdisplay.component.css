@@ -1,0 +1,19 @@
+.category {
+    padding: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: #D9EDF7;
+    width: auto;
+    border: #BCE8F1 solid 1px;
+    color: #6A9BB2;
+    float: left;
+    margin-right: 5px;
+}
+
+.categories {
+   
+}
+
+.wrapper {
+    display: inline-block;
+}

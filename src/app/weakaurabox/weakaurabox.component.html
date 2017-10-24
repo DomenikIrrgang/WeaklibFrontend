@@ -1,0 +1,11 @@
+<box [heading]="heading">
+    <div *ngIf="weakauras">
+        <div *ngFor="let weakaura of weakauras">
+            <span class="weakauraName"><a routerLink="/weakaura/{{ weakaura.hash }}">{{weakaura.name}}</a></span>
+            <span class="weakauraTime">{{ time.difference(weakaura.created) }}</span>
+        </div>
+        <div class="more">
+            <a href="{{ searchURL }}">more...</a>
+        </div>
+    </div>
+</box>

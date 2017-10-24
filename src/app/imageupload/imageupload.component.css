@@ -1,0 +1,59 @@
+.file-input {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload-square {
+    width: 100%;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #4099FF;
+    display: table;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.upload {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: sans-serif;
+    color: #4099FF;
+}
+
+.upload-icon {
+    margin-right: 2px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    margin-bottom: 5px;
+}
+
+.image-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.close {
+    font-size: 40px;
+}
+
+.close-div {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    z-index: 1000;
+}
+
+.image-container {
+    position: relative;
+}

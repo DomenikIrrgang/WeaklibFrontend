@@ -1,0 +1,85 @@
+.content {
+    grid-area: content;
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "left right"
+}
+
+.picture {
+    width: 100%;
+    vertical-align: middle;
+}
+
+@media (max-width: 1080px) {
+    .searchview {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "content"
+    }
+
+    .weakaura-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content max-content min-content;
+        grid-template-areas: "name"
+        "meta"
+        "categories"
+        "description";
+    }
+
+    .weakaura-picture {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width: 1080px) {
+    .searchview {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "left content right"
+    }
+
+    .weakaura-grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: max-content max-content max-content min-content;
+        grid-template-areas: "image name"
+        "image meta"
+        "image categories"
+        "image description";
+    }
+
+    .weakaura-picture {
+        grid-area: image;
+        margin-right: 10px;
+    }
+}
+
+.picture-container {
+    position: relative;
+    transform: translate(0px, -50%);
+    top: 50%;
+}
+
+.weakaura-name {
+    grid-area: name;
+    font-size: 22px;
+}
+
+.weakaura-meta {
+    grid-area: meta;
+    margin-bottom: 5px;
+}
+
+.weakaura-description {
+    grid-area: description;
+}
+
+.weakaura-categories {
+    grid-area: categories;
+}

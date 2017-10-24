@@ -1,0 +1,23 @@
+<div class="news-view" *ngIf="news">
+    <div class="picture">
+        <div class="picture-helper">
+            <img src="{{ news.imageURL }}" />
+        </div>
+    </div>
+    <div class="news">
+        <div class="text">
+            <div class="title">
+                {{ news.title }}
+            </div>
+            <div class="timestamp">
+                {{ time.difference(news.uploadTime ) }}
+            </div>
+            <div class="news-content">
+                {{ news.content }}
+            </div>
+        </div>
+        <div class="comments">
+            <comments [source]="news"></comments>
+        </div>
+    </div>
+</div>

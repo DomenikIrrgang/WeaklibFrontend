@@ -1,0 +1,26 @@
+<box heading="Notifications">
+    <div *ngIf="notifications; else noNotifications">
+        <div class="notification" *ngFor="let notification of notifications">
+            <div class="picture">
+                <img src="{{ getImage(notification.type) }}" />
+            </div>
+
+            <div class="actor">
+                <span><a routerLink="/user/{{ notification.actor1.name }}">{{ notification.actor1.name }}</a></span>
+            </div>
+
+            <div class="arrow">
+                &rarr;
+            </div>
+
+            <div class="actor">
+                <span><a routerLink="/weakaura/{{ notification.weakaura.hash }}">{{ notification.weakaura.name }}</a></span>
+            </div>
+
+            <div class="time">
+                {{ time.difference(notification.timestamp) }}
+            </div>
+        </div>
+    </div>
+    <ng-template #noNotifications>You have no notifications :(</ng-template>
+</box>

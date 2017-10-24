@@ -1,0 +1,25 @@
+<div class="comment">
+    <div class="comment-profile-picture">
+        <img src="{{ comment.user.profilePicture }}" />
+    </div>
+    <div class="comment-title">
+        <a routerLink="/user/{{ comment.user.name }}">{{ comment.user.name }}</a>
+        <span class="timestamp">{{ time.difference(comment.created) }}</span>
+    </div>
+    <div class="comment-content">
+        {{ comment.text }}
+    </div>
+
+    <div class="reply">
+        <div class="reply-text">
+            <a (click)="changeReplyVisibility()">reply</a>
+        </div>
+        <div class="reply-area" [hidden]="!replyVisible">
+            <commentinput (commentNotify)="reply($event)"></commentinput>
+        </div>
+    </div>
+
+    <div class="comments">
+        <comment *ngFor="let nestedComment of comment.comments" [comment]="nestedComment"></comment>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+.background {
+   position: fixed;
+   left: 0px;
+   top: 50px;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   opacity: 0.5;
+   z-index: 9999;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "left head close"
+    "left content right";
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 50px;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    height: 500px;
+}
+
+
+.head {
+    text-align: center;
+    color: #ffffff;
+    grid-area: head;
+    line-height: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.arrow-left {
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    display: inline-block;
+    line-height: 600px;
+    height: 600px;
+}
+
+.arrow {
+    color: #ffffff;
+}
+
+.arrow:hover {
+    color: #286090;
+}
+
+.preview {
+    text-align: center;
+    line-height: 600px;
+    height: 650px;
+    display: inline-block;
+}
+
+.preview > img {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.arrow-right {
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    height: 100%;
+    display: inline-block;
+    line-height: 645px;
+    line-height: 600px;
+    height: 600px;
+}
+
+.preview-close {
+    grid-area: close;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.close {
+    font-size: 50px;
+}
