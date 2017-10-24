@@ -1,11 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Weakaura } from "../util/weakaura";
-import { WEAKAURAS } from "../mockdata/weakauras";
-import { List } from "../util/list";
 import { WeaklibService } from "./weaklib.service";
-import { HttpService } from "./http.service";
-import { User } from "../util/user";
-
 import { Http, Headers, Response, RequestOptions } from "@angular/http";
 import "rxjs/add/operator/toPromise";
 import { Observable } from "rxjs/Rx";
@@ -16,7 +11,7 @@ import "rxjs/add/operator/catch";
 @Injectable()
 export class WeakauraService extends WeaklibService {
 
-    constructor(private http: Http, private httpService: HttpService) {
+    constructor(private http: Http) {
         super();
     }
 

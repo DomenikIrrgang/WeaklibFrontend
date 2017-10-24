@@ -1,7 +1,7 @@
 export class News {
-    title: String;
-    imageURL: String;
-    uploadTime: number;
-    content: String;
-    hash: string;
+    public title: string;
+    public imageURL: string;
+    public uploadTime: number;
+    public content: string;
+    public hash: string;
 }

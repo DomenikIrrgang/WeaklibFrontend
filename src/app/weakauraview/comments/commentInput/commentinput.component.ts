@@ -1,4 +1,4 @@
-import { Component, Output, OnInit, Input, ViewChild, EventEmitter } from "@angular/core";
+import { Component, Output, ViewChild, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "commentinput",

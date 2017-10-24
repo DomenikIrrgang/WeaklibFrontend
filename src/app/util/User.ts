@@ -1,11 +1,11 @@
 export class User {
-    name: string;
-    email: string;
-    password: string;
-    profilePicture: string;
-    description: string;
-    created;
-    updated;
+    public name: string;
+    public email: string;
+    public password: string;
+    public profilePicture: string;
+    public description: string;
+    public created;
+    public updated;
 
     constructor(name: string, password: string, email: string) {
         this.name = name;

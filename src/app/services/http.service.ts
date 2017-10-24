@@ -1,7 +1,4 @@
 import { Injectable } from "@angular/core";
-import { User } from "../util/User";
-import { USER } from "../mockdata/user";
-import { WeaklibService } from "./weaklib.service";
 
 import { Http, Headers } from "@angular/http";
 import "rxjs/add/operator/toPromise";

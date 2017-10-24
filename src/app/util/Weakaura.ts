@@ -2,14 +2,14 @@ import { WeakauraVersion } from "./weakauraversion";
 import { User } from "./user";
 
 export class Weakaura {
-    name: string;
-    user: User;
-    created: number;
-    updated: number;
-    views: number;
-    hash: string;
-    description: string;
-    profilePicture: string;
-    strings: WeakauraVersion[];
-    images: string[];
+    public name: string;
+    public user: User;
+    public created: number;
+    public updated: number;
+    public  views: number;
+    public hash: string;
+    public description: string;
+    public profilePicture: string;
+    public strings: WeakauraVersion[];
+    public images: string[];
 }

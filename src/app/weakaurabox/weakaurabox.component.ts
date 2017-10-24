@@ -1,4 +1,4 @@
-import { Component, Input, Directive, ElementRef } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Weakaura } from "../util/weakaura";
 import { Time } from "../util/time";
 

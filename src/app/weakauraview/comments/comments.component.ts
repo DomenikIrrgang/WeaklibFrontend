@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from "@angular/core";
 import { Comment } from "../../util/comment";
 import { WeakauraService } from "../../services/weakaura.service";
-import { Weakaura } from "../../util/weakaura";
 import { Time } from "../../util/time";
 
 @Component({

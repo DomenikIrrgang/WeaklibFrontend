@@ -1,10 +1,7 @@
 import { Injectable } from "@angular/core";
 import { WeaklibService } from "./weaklib.service";
-import { HttpService } from "./http.service";
-
-import { Http, Headers, Response, RequestOptions } from "@angular/http";
+import { Http, Headers, RequestOptions } from "@angular/http";
 import "rxjs/add/operator/toPromise";
-import { Observable } from "rxjs/Rx";
 
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
@@ -12,7 +9,7 @@ import "rxjs/add/operator/catch";
 @Injectable()
 export class ImageUploadService extends WeaklibService {
 
-    constructor(private http: Http, private httpService: HttpService) {
+    constructor(private http: Http) {
         super();
     }
 

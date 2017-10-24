@@ -1,6 +1,5 @@
 import { Component, Input } from "@angular/core";
 import { Weakaura } from "../../util/weakaura";
-import { WEAKAURAS } from "../../mockdata/weakauras";
 
 @Component({
     selector: "titlebar",

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { ImageUploadService } from "../services/imageupload.service";
 import { Weakaura } from "../util/weakaura";
 import { Globals } from "../util/globals";

@@ -1,9 +1,9 @@
 import { User } from "./user";
 
 export class Comment {
-    user: User;
-    text: String;
-    created: number;
-    hash: string;
-    comments: Comment[];
+    public user: User;
+    public text: string;
+    public created: number;
+    public hash: string;
+    public comments: Comment[];
 }

@@ -1,7 +1,7 @@
 export class WeakauraVersion {
-    versionnumber: String;
-    changes: String;
-    string: String;
-    created;
-    updated;
+    public versionnumber: string;
+    public changes: string;
+    public string: string;
+    public created;
+    public updated;
 }
