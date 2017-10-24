@@ -5,9 +5,9 @@
     <div class="comment-title">
         <a routerLink="/user/{{ comment.user.name }}">{{ comment.user.name }}</a>
         <span class="timestamp">{{ time.difference(comment.created) }}</span>
+        <span class="version">(Version: {{ comment.version }})</span>
     </div>
-    <div class="comment-content">
-        {{ comment.text }}
+    <div class="comment-content"  [innerHtml]="comment.text | nohtml">
     </div>
 
     <div class="reply">
@@ -20,6 +20,6 @@
     </div>
 
     <div class="comments">
-        <comment *ngFor="let nestedComment of comment.comments" [comment]="nestedComment"></comment>
+        <comment *ngFor="let nestedComment of comment.comments" [comment]="nestedComment" [root]="root" (commentNotify)="commentPosted()"></comment>
     </div>
 </div>

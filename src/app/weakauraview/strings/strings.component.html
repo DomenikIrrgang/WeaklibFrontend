@@ -1,6 +1,6 @@
 <div class="strings">
     <div *ngIf="weakaura">
-        <div *ngFor="let version of weakaura.versions">
+        <div *ngFor="let version of weakaura.versions.reverse()">
             <weakaurastring [weakauraVersion]="version"></weakaurastring>
         </div>
     </div>

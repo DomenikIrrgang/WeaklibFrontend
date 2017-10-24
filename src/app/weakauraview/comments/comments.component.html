@@ -2,9 +2,9 @@
         <commentinput (commentNotify)="sendComment($event)"></commentinput>
 
     <div class="comments-box">
-        <div *ngIf="comments; else noComments">
+        <div *ngIf="comments && comments.length !== 0; else noComments">
             <div *ngFor="let comment of comments">
-                <comment [comment]="comment"></comment>
+                <comment [comment]="comment" [root]="comment" (commentNotify)="refreshComments()"></comment>
             </div>
         </div>
         <ng-template #noComments>There are no comments for this weakaura yet. Be the first to write one!</ng-template>

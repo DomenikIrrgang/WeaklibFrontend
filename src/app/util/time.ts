@@ -19,11 +19,11 @@ export class Time {
         } else if (elapsed < msPerDay) {
             return Math.round(elapsed / msPerHour) + " hour(s) ago";
         } else if (elapsed < msPerMonth) {
-            return "approximately " + Math.round(elapsed / msPerDay) + " day(s) ago";
+            return Math.round(elapsed / msPerDay) + " day(s) ago";
         } else if (elapsed < msPerYear) {
-            return "approximately " + Math.round(elapsed / msPerMonth) + " month(s) ago";
+            return Math.round(elapsed / msPerMonth) + " month(s) ago";
         } else {
-            return "approximately " + Math.round(elapsed / msPerYear) + " year(s) ago";
+            return Math.round(elapsed / msPerYear) + " year(s) ago";
         }
     }
 }

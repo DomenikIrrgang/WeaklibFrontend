@@ -31,17 +31,20 @@ export class WeakauraService extends WeaklibService {
         return this.http.get(this.baseURL + this.baseURI + "/weakauracomment?hash=" + hash);
     }
 
-    public postComment(hash: string, id: string, comment: string): Observable<Response>  {
+    public postComment(root: string, hash: string, id: string, comment: string): Observable<Response>  {
         let url: string = "/weakauracomment?";
         console.log(hash, id, comment);
         if (hash.length > 0) {
-            url += "root=" + hash + "&";
+            url += "hash=" + hash + "&";
         }
         if (id.length > 0) {
             url += "id=" + id + "&";
         }
         if (comment.length > 0) {
             url += "comment=" + comment + "&";
+        }
+        if (root.length > 0) {
+            url += "root=" + root + "&";
         }
         return this.http.post(this.baseURL + this.baseURI + url, "", this.options);
     }

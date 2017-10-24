@@ -14,6 +14,8 @@ export class CommentInputComponent {
 
     public sendComment(): void {
         this.commentNotify.emit(this.comment.nativeElement.value);
+        this.comment.nativeElement.value = "";
+        this.textAreaAdjust();
     }
 
     public textAreaAdjust() {

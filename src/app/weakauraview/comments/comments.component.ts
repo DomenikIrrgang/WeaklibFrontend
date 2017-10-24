@@ -19,16 +19,21 @@ export class CommentsComponent implements OnInit {
     constructor(private commentService: WeakauraService, private time: Time) { }
 
     public ngOnInit(): void {
-        this.commentService.getComments(this.source.hash).subscribe((comments) => {
-            this.comments = JSON.parse(comments["_body"]);
-            console.log(this.comments);
-        });
+        this.refreshComments();
     }
 
     public sendComment(comment: string) {
         console.log(comment);
-        this.commentService.postComment(this.source.hash, "", comment).subscribe(() => {
-            console.log("posted comment");
+        // tslint:disable-next-line:max-line-length
+        this.commentService.postComment("", this.source.hash, "", comment.replace(/\r\n|\r|\n/g, "<br/>").replace(/<(?!br\s*\/?)[^>]+>/g, "")).subscribe(() => {
+            this.refreshComments();
+        });
+    }
+
+    public refreshComments(): void {
+        this.commentService.getComments(this.source.hash).subscribe((comments) => {
+            this.comments = JSON.parse(comments["_body"]).reverse();
+            console.log(this.comments);
         });
     }
 }

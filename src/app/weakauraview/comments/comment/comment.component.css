@@ -24,6 +24,10 @@
     color: gray;
     font-size: 14px;
 }
+.version {
+    color: gray;
+    font-size: 14px;
+}
 
 .reply {
     text-align: left;
@@ -31,7 +35,7 @@
 
 .comments {
     margin-left: 50px;
-    width: 100%;
+    width: auto;
     grid-area: comments;
 }
 
