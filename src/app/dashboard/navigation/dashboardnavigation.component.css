@@ -1,0 +1,38 @@
+.dashboard-navigation {
+    background-color: #FFFFFF;
+}
+
+.dashboard-navigation-category {
+    background-color: #FFFFFF;
+    padding-bottom: 5px;
+}
+
+.category-content {
+    background-color: #FFFFFF;
+}
+
+.category-name {
+    color: #4099FF;
+    padding: 8px 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: #FFFFFF;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #286090;
+    color: white;
+}

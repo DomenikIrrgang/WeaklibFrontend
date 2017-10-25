@@ -47,6 +47,8 @@ import { ErrorMessageComponent } from "./errormessageview/errormessage.component
 import { CommentComponent } from "./weakauraview/comments/comment/comment.component";
 import { CommentInputComponent } from "./weakauraview/comments/commentInput/commentinput.component";
 import { NewLinePipe } from "./util/NewLinePipe";
+import { HomeViewComponent } from "./homeview/homeview.component";
+import { DashboardNavigationComponent } from "./dashboard/navigation/dashboardnavigation.component";
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { NewLinePipe } from "./util/NewLinePipe";
     CommentComponent,
     CommentInputComponent,
     NewLinePipe,
+    HomeViewComponent,
+    DashboardNavigationComponent,
   ],
   imports: [
     BrowserModule,

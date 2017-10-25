@@ -29,6 +29,7 @@ export class ImageUploadComponent {
             }
         } else {
             this.files = event.target.files;
+            console.log("read");
             let reader = new FileReader();
             reader.onload = function(e) {
                 this.paths = [ {

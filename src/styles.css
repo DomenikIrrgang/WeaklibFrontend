@@ -27,26 +27,3 @@
     grid-template-areas: "left content right";
     grid-gap: 10px;
 }
-
-.scrollbar
-{
-	overflow-y: scroll;
-}
-#style-5::-webkit-scrollbar-track
-{
-
-}
-
-#style-5::-webkit-scrollbar
-{
-	width: 5px;
-}
-
-#style-5::-webkit-scrollbar-thumb
-{
-	background-color: #286090;
-	border-radius: 5px;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%,
-	                   color-stop(.5, rgba(255, 255, 255, .2)),
-					   color-stop(.5, transparent), to(transparent));
-}

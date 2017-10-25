@@ -18,7 +18,6 @@ export class UploadWeakauraViewComponent {
     public name: string = "";
     public description: string = "";
     public string: string = "";
-    public version: string = "";
     public categories: string[] = [];
 
     constructor(private imageUploadService: ImageUploadService, private weakauraService: WeakauraService) { }
@@ -29,7 +28,8 @@ export class UploadWeakauraViewComponent {
     }
 
     public upload(): void {
-        if (this.image.files.length > 0) {
+        if (this.image.files.length > 0 && this.name !== "" &&
+            this.description !== "" && this.string !== "" && this.categories.length > 0) {
             this.imageUploadService.uploadImages(this.image.files).subscribe((data) => {
                 let response = JSON.parse(data._body);
                 if (response[0].error === "OK") {
@@ -37,7 +37,6 @@ export class UploadWeakauraViewComponent {
                     weakaura.description = this.description;
                     weakaura.name = this.name;
                     weakaura["string"] = this.string;
-                    weakaura["version"] = this.version;
                     weakaura.profilePicture = response[0].url;
                     weakaura.user = Globals.authenticatedUser;
                     weakaura["categories"] = this.categories;

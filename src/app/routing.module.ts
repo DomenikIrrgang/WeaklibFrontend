@@ -10,10 +10,12 @@ import { RegisterViewComponent } from "./registerview/registerview.component";
 import { LoginViewComponent } from "./loginview/loginview.component";
 import { NewsViewComponent } from "./newsview/newsview.component";
 import {UploadWeakauraViewComponent} from "./uploadweakauraview/uploadweakauraview.component";
+import { HomeViewComponent } from "./homeview/homeview.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/dashboard", pathMatch: "full" },
+    { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "dashboard", component: DashboardComponent },
+    { path: "home", component: HomeViewComponent },
     { path: "contact", component: ContactComponent },
     { path: "weakaura/:hash", component: WeakauraViewComponent },
     { path: "user/:username", component: UserViewComponent },

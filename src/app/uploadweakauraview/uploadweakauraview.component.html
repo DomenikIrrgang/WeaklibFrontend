@@ -3,40 +3,33 @@
         <box heading="Upload Weakaura">
             <div class="upload-grid">
                 <div class="weakaura-name">
-                    <b>Name:</b>
+                    <b>Name*:</b>
                 </div>
                 <div class="name-content">
                     <input class="form-element" [(ngModel)]="name" type="text" name="weakauraname">
                 </div>
                 <div class="categories">
-                    <b> Categories: </b>
+                    <b> Categories*: </b>
                 </div>
                 <div class="categories-content">
                     <categories (notify)="categoriesChanged($event)"></categories>
                 </div>
                 <div class="weakaura-description">
-                    <b>Description: </b>
+                    <b>Description*: </b>
                 </div>
                 <div class="description-content">
                     <textarea class="form-element textarea" [(ngModel)]="description" (keydown)="textAreaAdjust()" (keyup)="textAreaAdjust()" #descriptionElement> </textarea>
                 </div>
 
                 <div>
-                    <b>String: </b>
+                    <b>String*: </b>
                 </div>
                 <div>
                     <input class="form-element" [(ngModel)]="string" type="text" name="weakaura-string">
                 </div>
 
-                <div>
-                    <b>Version: </b>
-                </div>
-                <div>
-                    <input class="form-element" [(ngModel)]="version" type="text" name="weakaura-version">
-                </div>
-
                 <div class="profile-picture">
-                    <b> Profile Picture: </b>
+                    <b> Profile Picture*: </b>
                 </div>
                 
                 <div class="picture-content">

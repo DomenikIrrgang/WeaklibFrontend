@@ -40,7 +40,7 @@
 @media (min-width: 1080px) {
     .searchview {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
         grid-template-areas: "left content right"
     }
 

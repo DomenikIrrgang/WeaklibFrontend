@@ -6,8 +6,8 @@ let win = null;
 app.on('ready', function () {
 
     // Initialize the window to our specified dimensions
-    win = new BrowserWindow({ width: 1200, height: 800  });
-    //win.setMenu(null);
+    win = new BrowserWindow({ width: 1200, height: 800, frame: false });
+    win.setMenu(null);
     // Specify entry point
     win.loadURL('http://localhost:4200');
 

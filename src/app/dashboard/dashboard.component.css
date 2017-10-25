@@ -1,22 +1,11 @@
 @media (min-width: 1080px) {
     .dashboard-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 3fr;
+        grid-template-columns: 200px auto;
         grid-template-areas: 
-        "weakaurasgrid weakaurasgrid weakaurasgrid"
-        "news news notifications";
+        "navigation content";
         grid-gap: 5px;
-        height: 99%;
-    }
-    
-    .weakauras-grid {
-        grid-area: weakaurasgrid;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
-        grid-template-areas: 
-        "latestWeakauras bestRatedWeakauras mostPopularWeakauras";
+        height: 100%;
     }
 }
 
@@ -32,37 +21,12 @@
         grid-gap: 5px;
         height: 99%;
     }
-
-    .weakauras-grid {
-        grid-area: weakaurasgrid;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 5px;
-        grid-template-areas: 
-        "latestWeakauras"
-        "bestRatedWeakauras" 
-        "mostPopularWeakauras";
-    }
 }
 
-.latestWeakauras {
-    grid-area: latestWeakauras;
+.dashboard-navigation {
+    grid-area: navigation;
 }
 
-.bestRatedWeakauras {
-    grid-area: bestRatedWeakauras;
-}
-
-.mostPopularWeakauras {
-    grid-area: mostPopularWeakauras;
-}
-
-.news {
-    grid-area: news;
-    margin-bottom: 5px;
-}
-
-.notifications {
-    grid-area: notifications;
-    margin-bottom: 5px;
+.dashboard-conent {
+    grid-area: content;
 }

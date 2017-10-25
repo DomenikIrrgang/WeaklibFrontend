@@ -1,12 +1,12 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: 50px auto;
     grid-template-areas: 
     "navigation"
-    "content"
-    "footer";
+    "content";
     height: 100vh;
+    background-color: #f1f1f1;
 }
 
 .header {
@@ -25,8 +25,25 @@
     padding: 5px;
 }
 
-.footer {
-    background-color: white;
-    height: 50px;
-    grid-area: footer;
+.scrollbar
+{
+	overflow-y: scroll;
+}
+#style-5::-webkit-scrollbar-track
+{
+
+}
+
+#style-5::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+#style-5::-webkit-scrollbar-thumb
+{
+	background-color: #286090;
+	border-radius: 5px;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
 }

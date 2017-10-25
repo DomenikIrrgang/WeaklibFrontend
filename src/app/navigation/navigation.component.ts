@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../services/user.service";
 import { Globals } from "../util/globals";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "navigation",
@@ -11,7 +12,7 @@ export class NavigationComponent implements OnInit {
 
     public global = Globals;
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService, private router: Router) { }
 
     public ngOnInit(): void {
         this.userService.getAuthenticatedUser().subscribe((data) => {
@@ -30,6 +31,7 @@ export class NavigationComponent implements OnInit {
     public logout(event): void {
         this.userService.logout().subscribe((data) => {
             Globals.authenticatedUser = undefined;
+            this.router.navigate(["/home"]);
         },
         (error) => {
             console.log(error);
