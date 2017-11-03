@@ -1,11 +1,10 @@
 @media (min-width: 1080px) {
     .dashboard-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 3fr;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
-        "weakaurasgrid weakaurasgrid weakaurasgrid"
-        "news news notifications";
+        "left news right";
         grid-gap: 5px;
         height: 99%;
     }
@@ -26,9 +25,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
-        "weakaurasgrid"
-        "news"
-        "notifications";
+        "news";
         grid-gap: 5px;
         height: 99%;
     }

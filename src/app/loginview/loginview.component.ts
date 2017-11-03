@@ -24,11 +24,11 @@ export class LoginViewComponent {
 
     public loginClick(): void {
         this.userService.login(this.username, this.password).subscribe((data) => {
-            if (data["_body"] === "SUCCESS") {
+            if (data.status === 200) {
                 this.userService.getAuthenticatedUser().subscribe((result) => {
                     Globals.authenticatedUser = JSON.parse(result["_body"]);
                 });
-                this.router.navigate(["/dashboard"]);
+                this.router.navigate(["/home"]);
             } else {
                 this.statusType = "error";
                 this.statusMessage = "Username or password is wrong!";

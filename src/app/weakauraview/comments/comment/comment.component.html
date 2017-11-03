@@ -10,7 +10,7 @@
     <div class="comment-content"  [innerHtml]="comment.text | nohtml">
     </div>
 
-    <div class="reply">
+    <div *ngIf="global.authenticatedUser !== undefined" class="reply">
         <div class="reply-text">
             <a (click)="changeReplyVisibility()">reply</a>
         </div>

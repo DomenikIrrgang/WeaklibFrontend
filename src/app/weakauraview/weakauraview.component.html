@@ -3,7 +3,7 @@
         <profilepicture profilePicture="{{ weakaura.profilePicture }}">
             <div>
                 <div><h1 class="heading">{{ weakaura.name }}</h1></div>
-                <input type="button" class="btn btn-primary btn-sm follow-button" value="Follow" (click)="follow()"/>
+                <input *ngIf="global.authenticatedUser !== undefined" disabled="true" type="button" class="btn btn-primary btn-sm follow-button" value="Install (comming soon)" (click)="follow()"/>
                 <categoriesdisplay [categories]="weakaura.categories" [align]="'center'"></categoriesdisplay>
                 <div class="entry"><img src="assets/img/user.png" class="icon"/>Author: <a routerLink="/user/{{ weakaura.user }}">{{ weakaura.user }}</a></div>
                 <div class="entry"><img src="assets/img/clock.png" class="icon"/><b>Upload: </b>{{ time.difference(weakaura.created) }}</div>

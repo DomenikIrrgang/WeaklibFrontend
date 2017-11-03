@@ -6,27 +6,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home">WeakLib</a>
+            <a href="home"><img class="logo"src="assets/img/logo.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar" style="-webkit-app-region: drag">
             <ul class="nav navbar-nav" style="-webkit-app-region: no-drag">
                 <li routerLinkActive="active">
                     <a routerLink="/home" (click)="navigationElementClick()">Home</a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" *ngIf="global.authenticatedUser !== undefined">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Weakauras</a>
                     <ul class="dropdown-menu" role="menu">
                         <li routerLinkActive="active">
                             <a routerLink="/uploadweakaura" (click)="navigationElementClick()">Upload</a>
                         </li>
                         <li routerLinkActive="active">
-                            <a routerLink="/weakauras/local" (click)="navigationElementClick()">Local</a>
+                            <a routerLink="#" (click)="navigationElementClick()">Local (Comming Soon)</a>
                         </li>
                         <li routerLinkActive="active">
-                            <a routerLink="/weakauras/weaklib" (click)="navigationElementClick()">Online</a>
+                            <a routerLink="#" (click)="navigationElementClick()">Online (Comming Soon)</a>
                         </li>
                         <li routerLinkActive="active">
-                            <a routerLink="/weakauras/guild" (click)="navigationElementClick()">Guild</a>
+                            <a routerLink="#" (click)="navigationElementClick()">Guild (Comming Soon)</a>
                         </li>
                     </ul>
                 </li>
@@ -38,7 +38,7 @@
                 </li>
             </ul>
 
-            <div *ngIf="global.authenticatedUser == undefined; else loggedIn">
+            <div *ngIf="global.authenticatedUser === undefined; else loggedIn">
                 <ul class="nav navbar-nav navbar-right" style="-webkit-app-region: no-drag">
                     <li routerLinkActive="active">
                         <a routerLink="/register" (click)="navigationElementClick()">

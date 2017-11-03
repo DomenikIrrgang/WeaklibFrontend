@@ -1,5 +1,5 @@
 <div class="comments">
-        <commentinput (commentNotify)="sendComment($event)"></commentinput>
+        <commentinput *ngIf="global.authenticatedUser !== undefined" (commentNotify)="sendComment($event)"></commentinput>
 
     <div class="comments-box">
         <div *ngIf="comments && comments.length !== 0; else noComments">

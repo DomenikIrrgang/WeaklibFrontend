@@ -3,6 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import { Time } from "../util/time";
 import { Weakaura } from "../util/weakaura";
 import { WeakauraService } from "../services/weakaura.service";
+import { Globals } from "../util/globals";
 
 @Component({
     selector: "weakauraview",
@@ -15,6 +16,7 @@ export class WeakauraViewComponent implements OnInit {
 
     @ViewChild("imagePreview")
     public imagePreview;
+    public global = Globals;
 
     constructor(private weakauraService: WeakauraService, private route: ActivatedRoute, private time: Time) { }
 

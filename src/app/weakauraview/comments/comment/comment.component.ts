@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Comment } from "../../../util/comment";
 import { Time } from "../../../util/time";
 import { WeakauraService } from "../../../services/weakaura.service";
+import { Globals } from "../../../util/globals";
 
 @Component({
     selector: "comment",
@@ -19,6 +20,7 @@ export class CommentComponent {
     @Output()
     public commentNotify: EventEmitter<string> = new EventEmitter<string>();
 
+    public global = Globals;
     public replyVisible: boolean = false;
 
     constructor(private time: Time, private commentService: WeakauraService) { }
